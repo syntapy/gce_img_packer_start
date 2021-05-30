@@ -8,4 +8,5 @@ source "googlecompute" "custom-mi" {
 
 build {
   sources = ["source.googlecompute.custom-mi"]
+  ssh_user = "beavis"
 }
