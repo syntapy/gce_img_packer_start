@@ -3,7 +3,6 @@ source "googlecompute" "custom-mi" {
   source_image = "ubuntu-2104-hirsute-v20210511a"
   source_image_family = "ubuntu-2104"
   zone = "us-west1-a"
-  ssh_user = "beavis"
   startup_script_file = "install.sh"
 }
 
