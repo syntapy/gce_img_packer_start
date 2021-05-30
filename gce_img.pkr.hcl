@@ -1,8 +1,9 @@
 source "googlecompute" "custom-mi" {
   project_id = "test-wtf-2734586432"
   source_image = "ubuntu-2104-hirsute-v20210511a"
-  ssh_user = "beavis"
+  source_image_family = "ubuntu-2104"
   zone = "us-west1-a"
+  ssh_user = "beavis"
 }
 
 build {
