@@ -1,6 +1,7 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/packer'
-  entrypoint: 'bash'
-  args: ['-c', 'ls > test_out.txt']
+  args:
+  - build
+  - gce_img.pkr.hcl
 - name: 'ubuntu'
   entrypoint: 'ls'
