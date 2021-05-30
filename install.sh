@@ -1,3 +1,3 @@
 #!/bin/sh 
 
-sudo touch test_file
+touch test_file
