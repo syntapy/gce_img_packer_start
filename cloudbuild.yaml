@@ -3,3 +3,6 @@ steps:
   args:
   - build
   - gce_img.pkr.hcl
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args: ['ls']
