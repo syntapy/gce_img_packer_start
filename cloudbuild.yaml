@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/packer'
   args:
   - build
-  - gce_img.pkr.hcl
+  - packer.pkr.hcl
 - name: 'ubuntu'
   entrypoint: 'bash'
   args: ['ls']
