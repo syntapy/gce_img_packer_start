@@ -1,5 +1,5 @@
 source "googlecompute" "custom-mi" {
-  project_id = "test-wtf-2734586432"
+  project_id = "world-conquest-6254"
   image_name = "modified-ubuntu"
   source_image = "ubuntu-2104-hirsute-v20210511a"
   source_image_family = "ubuntu-2104"
