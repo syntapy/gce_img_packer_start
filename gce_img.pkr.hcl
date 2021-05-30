@@ -4,9 +4,9 @@ source "googlecompute" "custom-mi" {
   source_image_family = "ubuntu-2104"
   zone = "us-west1-a"
   ssh_user = "beavis"
+  startup_script_file = "install.sh"
 }
 
 build {
   sources = ["source.googlecompute.custom-mi"]
-  startup_script_file = "install.sh"
 }
