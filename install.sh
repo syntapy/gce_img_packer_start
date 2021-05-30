@@ -1,3 +1,5 @@
 #!/bin/sh 
 
-touch test_file
+apt update
+apt upgrade
+wget www.google.com
