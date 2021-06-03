@@ -16,4 +16,4 @@ steps:
   entrypoint: 'env'
 options:
   env:
-  - 'MACHINE_NAME="k8s-server-ubuntu"'
+  - 'MACHINE_NAME=modified-ubuntu'
