@@ -1,9 +1,19 @@
 steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - images
+  - delete
+  - $MACHINE_NAME
 - name: 'gcr.io/$PROJECT_ID/packer'
   args:
   - build
   - -var
   - project_id=$PROJECT_ID
+  - -var
+  - machine_name=$MACHINE_NAME
   - gce_img.pkr.hcl
 - name: 'ubuntu'
   entrypoint: 'env'
+options:
+  env:
+  - 'MACHINE_NAME="k8s-server-ubuntu"'
