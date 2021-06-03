@@ -1,3 +1,3 @@
 #!/bin/sh 
 
-wget www.google.com
+touch /test-file
