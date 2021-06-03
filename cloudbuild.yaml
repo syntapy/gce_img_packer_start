@@ -3,17 +3,16 @@ steps:
   args:
   - images
   - delete
-  - $MACHINE_NAME
+  - $_MACHINE_NAME
 - name: 'gcr.io/$PROJECT_ID/packer'
   args:
   - build
   - -var
   - project_id=$PROJECT_ID
   - -var
-  - machine_name=$MACHINE_NAME
+  - machine_name=$_MACHINE_NAME
   - gce_img.pkr.hcl
 - name: 'ubuntu'
   entrypoint: 'env'
-options:
-  env:
-  - 'MACHINE_NAME=modified-ubuntu'
+substitutions:
+  _MACHINE_NAME: modified-ubuntu
