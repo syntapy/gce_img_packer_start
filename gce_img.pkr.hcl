@@ -1,8 +1,8 @@
-variable project_id {
+variable "project_id" {
   type=string
 }
 
-variable machine_name {
+variable "machine_name" {
   type=string
 }
 
