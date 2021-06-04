@@ -9,5 +9,6 @@ steps:
   - gce_img.pkr.hcl
 - name: 'ubuntu'
   entrypoint: 'env'
+    
 substitutions:
-  _MACHINE_NAME: k8s-server-$TAG_NAME
+  _MACHINE_NAME: k8s-server-0001
