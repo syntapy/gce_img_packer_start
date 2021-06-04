@@ -13,7 +13,7 @@ source "googlecompute" "custom-mi" {
   source_image_family = "ubuntu-2104"
   ssh_username = "packer"
   zone = "us-west1-a"
-  wrap_startup_script = false
+  wrap_startup_script = true
   startup_script_file = "install.sh"
 }
 
