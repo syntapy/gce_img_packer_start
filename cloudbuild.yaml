@@ -11,4 +11,4 @@ steps:
   entrypoint: 'env'
     
 substitutions:
-  _MACHINE_NAME: k8s-server-0002
+  _MACHINE_NAME: k8s-server-0003
