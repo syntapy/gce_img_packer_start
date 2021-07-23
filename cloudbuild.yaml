@@ -1,14 +1,23 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/packer'
   args:
-  - build
+  - init
+  - -upgrade
+  - gce_img.pkr.hcl
+  env:
+  - 'PACKER_LOG=0'
+- name: 'gcr.io/$PROJECT_ID/packer'
+  args:
+  - build 
+  - -force
   - -var
   - project_id=$PROJECT_ID
   - -var
   - machine_name=$_MACHINE_NAME
   - gce_img.pkr.hcl
-- name: 'ubuntu'
-  entrypoint: 'env'
-    
+  env:
+  - 'PACKER_LOG=0'
+
+timeout: 1200s
 substitutions:
-  _MACHINE_NAME: k8s-server-0003
+  _MACHINE_NAME: k8s-server
